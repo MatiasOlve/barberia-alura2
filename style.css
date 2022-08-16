@@ -1,0 +1,371 @@
+body{
+    font-family: 'Inconsolata', monospace;
+}
+
+.encabezado{
+    background-image: url(./imagenes/header.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+
+.navegacion{
+    /*background-color: #F7ECDE;*/
+    position: relative;
+    width: 100%;
+    margin: auto;
+}
+
+.navegacion h1{
+    display: inline;
+    position: absolute;
+    font-weight: bold;
+    top: 50px;
+    font-size: 30px;
+}
+
+.logo{
+    height: 120px;
+    width: 80px;
+}
+
+.navegador{
+    position: absolute;
+    top: 50px;
+    right: 100px;
+    font-size: 25px;
+}
+
+.navegador li{
+    display: inline;
+    margin: 0 0 0 15px;
+}
+
+.contacto{
+    padding: 10px 5px;
+    margin: 0 0 0 20px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: hsl(23, 68%, 65%);
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.contacto:hover{
+    background-color: darkorange;
+    transform: scale(1.10);
+}
+
+.titulo-principal{
+    margin: 20px auto;
+}
+
+.texto{
+    text-align: left;
+    width: 45%;
+    font-size: 22px;
+    margin: 20px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.texto h1, .texto-ubicacion h1{
+    font-size: 30px;
+}
+
+.texto p, .texto-ubicacion p{
+    margin: 15px auto;
+}
+
+.mision{
+    font-style: italic;
+}
+
+.texto-ubicacion{
+    text-align: center;
+    width: 45%;
+    font-size: 22px;
+    margin: 80px 0 0 10px;
+    display: inline-block;
+    vertical-align: top;
+}
+
+.slide{
+    max-width: 50%;
+    display: inline;
+    float: right;
+    margin: 20px 50px auto;
+}
+
+.imagen{
+    width: 500px;
+    height: 300px;
+    display: none;
+    border-radius: 2%;
+    box-sizing: border-box;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.fade{
+    animation-name: fade;
+    animation-duration: 3s;
+}
+
+.ubicacion{
+
+    background-image: url(./imagenes/ubicacion3.jpg);
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    text-align: center;
+    /*background: linear-gradient(#F7ECDE,#E9DAC1);*/
+    margin: 0 auto 0;
+    padding: 0 20px 0 0;
+}
+
+.mapa{
+    width: 600px;
+    height: 300px;
+    display: inline-block;
+    margin: 20px 50px 20px 15px;
+}
+
+.diferenciales{
+    background: linear-gradient(whitesmoke,pink);
+    text-align: center;
+}
+
+.diferenciales h1{
+    font-size: 3em;
+}
+
+.diferenciales li{
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    vertical-align: top;
+    margin: 10px 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+}
+
+.diferenciales li h1{
+    font-size: 5em;
+}
+
+.diferenciales li h2{
+    font-size: 2em;
+}
+
+.diferenciales li p{
+    font-size: 1em;
+    margin: 5% auto;;
+}
+
+.ventas{
+    margin: 20px auto;
+    text-align: center;
+}
+
+.ventas h1{
+    font-size: 3em;
+}
+
+.productos{
+    width: 90%;
+    margin: 0 auto;
+    padding: 50px;
+}
+
+.productos li{
+    display: inline-block;
+    text-align: center;
+    width: 25%;
+    vertical-align: top;
+    margin: 0 1.5%;
+    padding: 30px 20px;
+    box-sizing: border-box;
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.productos li:hover{
+    border-color: #c78c19;
+}
+
+.productos li:active{
+    border-color: green;
+}
+
+.productos h2{
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.productos li:hover h2{
+    font-size: 33px;
+}
+
+.producto-descripcion{
+    font-size: 18px;
+}
+
+.producto-precio{
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+footer{
+    background-color: #2C3333;
+    color: white;
+    text-align: center;
+    padding: 10px;
+
+}
+
+/*Modal*/
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    /*background-color: rgb(0,0,0); Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  }
+  
+  /* Modal Content/Box */
+  .modal-content {
+    background-color: #fefefe;
+    margin: 5% auto; /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 50%; /* Could be more or less, depending on screen size */
+    border-radius: 2%;
+  }
+  
+  /* The Close Button */
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+
+  /*Form*/
+
+.form{
+    width: 70%;
+    margin: auto;
+    text-align: center;
+}
+
+form{
+    margin: auto;
+}
+
+form label, form legend{
+    display: block;
+    font-size: 20px;
+    margin: 0 0 10px;
+}
+
+.input-padron, form textarea{
+    display: block;
+    margin: 0 0 20px;
+    padding: 10px 25px;
+    width: 50%;
+}
+
+.checkbox{
+    margin: 20px 0;
+}
+
+.enviar{
+    width: 40%;
+    padding: 15px 0;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    background-color: orange;
+    border: none;
+    border-radius: 5px;
+    transition: 0.5s all;
+    cursor: pointer;
+}
+
+.enviar:hover{
+    background-color: darkorange;
+    transform: scale(1.10);
+}
+
+@keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  /*Responsive*/
+
+  @media screen and (max-width:1280px){
+
+    .texto{
+        display: block;
+        width: 96%;
+        margin: 2%;
+    }
+
+    .slide{
+        width: 100%;
+        display: block;
+        float: none;
+        margin: auto;
+    }
+
+    .mapa{
+        margin: 2% auto;
+    }
+
+    .texto-ubicacion{
+        margin: 0 auto;
+    }
+
+    .productos li{
+        display: inline-block;
+        text-align: center;
+        width: 100%;
+        vertical-align: top;
+        margin: 2% 1.5%;
+        padding: 30px 0;
+        box-sizing: border-box;
+        border: 2px solid black;
+        border-radius: 10px;
+    }
+
+    .modal-content{
+        width: 80%;
+    }
+
+}
+
+
